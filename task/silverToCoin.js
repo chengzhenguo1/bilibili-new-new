@@ -18,19 +18,7 @@ class silverToCoin extends base {
   }
 
   async run() {
-    const result = await this.request.get(this.silverToCoinURL);
-    if (result && result.code === 0) {
-      console.info('----- [银瓜子兑换硬币成功] -----');
-    } else {
-      console.info(`----- [银瓜子兑换硬币失败 原因是: ${result.msg}] -----`);
-    }
-
-    const queryCoinStatus = await this.request.get(
-      this.silverToCoinStatusURL,
-      {},
-      'data'
-    );
-    console.info(`----- [当前银瓜子余额：${queryCoinStatus.silver}] -----`);
+    console.log("果粒橙自写，删除银瓜子任务");
   }
 
   getTaskName() {
